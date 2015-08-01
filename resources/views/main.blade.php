@@ -26,7 +26,7 @@
     <!--[if lte IE 8]><script src="js/ie/respond.min.js"></script><![endif]-->
     <script src="js/main.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script>$('div.alert').delay(3000).slideUp(300);</script>
+
 </head>
 <body>
 
@@ -71,7 +71,7 @@
                 <li><a href="#two">Things I Can Do</a></li>
                 <li><a href="#three">A Few Accomplishments</a></li>
                 @if(Auth::user())
-                    <li><a href="#six" class="active">Comments</a></li>
+                    <li><a href="#six">Comments</a></li>
                     <li><a href="#eight">Leave feedback</a></li>
 
                 @else
@@ -93,6 +93,7 @@
 
         <!-- Main -->
         <div id="main">
+           @include('errors.errorLogic')
            @include('partials.flashMsg')
 
             @yield('content')

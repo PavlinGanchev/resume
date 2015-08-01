@@ -1,5 +1,5 @@
 <h3>Leave me feedback</h3>
-<p>To develop a project, it is always helpful to get a feedback. So, do not hesitate to contact me, please!</p>
+<p>To develop a project, it is always helpful to get a feedback. So, do not hesitate to contact me!</p>
 {!! Form::open(['action'=> 'MailController@send']) !!}
     <div class="row uniform">
         <div class="6u 12u(xsmall)"><input type="text" name="name" id="name" placeholder="Name" /></div>

@@ -45,8 +45,8 @@ class CommentController extends Controller {
 
 		Comment::create($comment);
 
-
-		return redirect('/#six')/*->with('message','You create new comment')*/;
+		session()->flash('flash_message', 'Your comment has been created');
+		return redirect('/');
 	}
 
 	/**
@@ -68,7 +68,9 @@ class CommentController extends Controller {
 	 */
 	public function edit($id)
 	{
-		//
+		$comment= Comment::findOrFail($id);
+
+		return view('comment.edit', compact('comment'));
 	}
 
 	/**
@@ -77,9 +79,15 @@ class CommentController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function update($id)
+	public function update($id, CreateCommentRequest $request)
 	{
-		//
+		$comment= Comment::findOrFail($id);
+
+		$comment->update($request->all());
+
+		session()->flash('flash_message', 'Your comment has been updated');
+		return redirect('/');
+
 	}
 
 	/**

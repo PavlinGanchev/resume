@@ -3,3 +3,4 @@
         {{Session::get('flash_message')}}
     </div>
 @endif
+<script>$('div.alert-success').delay(3000).slideUp(300);</script>

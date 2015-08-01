@@ -5,32 +5,8 @@
 <div class="container">
 
     @include('errors.errorLogic')
+    @include('partials.commentForm', array('submitText' => 'Create new comment'))
 
-
-    <div class="row uniform">
-        <div class="12u">
-            {!! Form::label('title','Title:') !!}
-            {!! Form::text('title' ) !!}
-        </div>
-    </div>
-
-    <div class="row uniform">
-        <div class="12u">
-            {!! Form::label('body','Body:') !!}
-            {!! Form::textarea('body') !!}
-        </div>
-    </div>
-     <div class="row uniform">
-         <ul class="actions">
-             <li>
-                 {!! Form::submit( 'Add new comment', ['class' => 'button special']) !!}
-             </li>
-             <li>
-                 {!! Form::reset( 'Reset the form') !!}
-             </li>
-         </ul>
-
-     </div>
 </div>
 {!! Form::close() !!}
 @stop
