@@ -146,6 +146,11 @@ return [
 		'App\Providers\EventServiceProvider',
 		'App\Providers\RouteServiceProvider',
 
+		/*
+		 * Breadcrumbs
+		 */
+		'DaveJamesMiller\Breadcrumbs\ServiceProvider',
+
 	],
 
 	/*
@@ -195,6 +200,7 @@ return [
 		'View'      => 'Illuminate\Support\Facades\View',
 		'Form'      => 'Illuminate\Html\FormFacade',
 		'Html'      => 'Illuminate\Html\HtmlFacade',
+		'Breadcrumbs' => 'DaveJamesMiller\Breadcrumbs\Facade',
 
 	],
 

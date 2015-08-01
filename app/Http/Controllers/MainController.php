@@ -2,6 +2,7 @@
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\User;
 
 use Illuminate\Http\Request;
 use App\Comment;
@@ -26,7 +27,6 @@ class MainController extends Controller {
 
 	public function index()
 	{
-
 		$comments= Comment::latest('published_at')->take(6)->skip(0)->get();
 
 		return view('wrapper', compact('comments'));

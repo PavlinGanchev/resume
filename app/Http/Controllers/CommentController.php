@@ -18,7 +18,7 @@ class CommentController extends Controller {
 	 */
 	public function index()
 	{
-		//
+
 	}
 
 	/**
@@ -69,7 +69,6 @@ class CommentController extends Controller {
 	public function edit($id)
 	{
 		$comment= Comment::findOrFail($id);
-
 		return view('comment.edit', compact('comment'));
 	}
 

@@ -6,7 +6,7 @@
 -->
 <html>
 <head>
-    <title>Mine Resume</title>
+    <title>Resume</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -93,6 +93,12 @@
 
         <!-- Main -->
         <div id="main">
+
+            <div class="container">
+                TODO: publised by:
+                TODO: emial->from;.
+                TODO: css mess!!!
+            </div>
            @include('errors.errorLogic')
            @include('partials.flashMsg')
 

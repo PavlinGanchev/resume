@@ -1,6 +1,7 @@
 @extends('main')
 
 @section('content')
+    {!! Breadcrumbs::render('comment')  !!}
 {!! Form::open([ 'action' => 'CommentController@store'])!!}
 <div class="container">
 
