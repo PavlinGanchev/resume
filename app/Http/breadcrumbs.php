@@ -23,5 +23,11 @@ $breadcrumbs->push('Register', url('register'));
 Breadcrumbs::register('comment', function($breadcrumbs)
 {
     $breadcrumbs->parent('home');
-    $breadcrumbs->push('Create comment', url('comment/create'));
+    $breadcrumbs->push('Leave comment', url('comment/create'));
+});
+// Home >  Edit Comment
+Breadcrumbs::register('commentEdit', function($breadcrumbs)
+{
+    $breadcrumbs->parent('home');
+    $breadcrumbs->push('Update comment', route('comment.edit'));
 });
