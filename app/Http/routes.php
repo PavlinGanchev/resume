@@ -27,7 +27,7 @@ Route:get('logout', 'Auth\AuthController@getLogout');
 
 Route::resource('comment', 'CommentController');
 
-Route::get('email','MailController@send');
+Route::post('email','MailController@send');
 /*Route::post('email', function(){
 
 	Mail::send('test',[], function($message){

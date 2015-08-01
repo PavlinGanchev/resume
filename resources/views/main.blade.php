@@ -25,6 +25,8 @@
     <script src="js/util.js"></script>
     <!--[if lte IE 8]><script src="js/ie/respond.min.js"></script><![endif]-->
     <script src="js/main.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>$('div.alert').delay(3000).slideUp(300);</script>
 </head>
 <body>
 
@@ -46,7 +48,7 @@
                     {{--Twitter <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>--}}
                     {{--Facebook--}} <li><a href="facebook.com" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
                      {{--Instagrem <li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>--}}
-                   {{--Github--}} <li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
+                   {{--Github--}} <li><a href="https://github.com/PavlinGanchev/resume" class="icon fa-github"><span class="label">Github</span></a></li>
                     {{--E-mail--}}<li><a href="#" class="icon fa-envelope"><span class="label">Email</span></a></li>
                 </ul>
             </section>
@@ -91,6 +93,8 @@
 
         <!-- Main -->
         <div id="main">
+           @include('partials.flashMsg')
+
             @yield('content')
 
         </div>
