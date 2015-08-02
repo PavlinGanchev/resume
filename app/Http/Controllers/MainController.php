@@ -25,11 +25,15 @@ class MainController extends Controller {
 	 * @return Response
 	 */
 
-	public function index()
+	public function index(Comment $comment)
 	{
 		$comments= Comment::latest('published_at')->take(6)->skip(0)->get();
 
-		return view('wrapper', compact('comments'));
+
+		return view('wrapper')->with(array(
+			'comments'=> $comments,
+
+		));
 	}
 
 	/**

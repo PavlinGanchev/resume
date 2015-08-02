@@ -1,6 +1,7 @@
 <?php namespace App\Http\Controllers;
 
 use App\Comment;
+use App\User;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
@@ -39,11 +40,15 @@ class CommentController extends Controller {
 	public function store(CreateCommentRequest $request)
 
 	{
-		$comment=$request->all();
+		$comment= new Comment($request->all());
 		$comment['published_at']= Carbon::now();
-		$comment['user_id']= Auth::user()->id;
 
-		Comment::create($comment);
+
+		Auth::user()->comments()->save($comment);
+
+		/*$comment['user_id']= Auth::user()->id;
+
+		Comment::create($comment);*/
 
 		session()->flash('flash_message', 'Your comment has been created');
 		return redirect('/');

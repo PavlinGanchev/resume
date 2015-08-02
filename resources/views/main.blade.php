@@ -95,8 +95,7 @@
         <div id="main">
 
             <div class="container">
-                TODO: publised by:
-                TODO: emial->from;.
+                TODO: emial->from;
                 TODO: css mess!!!
             </div>
            @include('errors.errorLogic')

@@ -1,7 +1,9 @@
 
 <h3>Comments</h3>
 
+
 @if( $comments )
+
     @foreach($comments as $comment)
         <hr/>
         <article>
@@ -10,7 +12,8 @@
 
             <div><p>{{ $comment->body }}</p></div>
             <div>
-                <p class="viewPublished">Published by:<br/> Date: {{ $comment->published_at }}</p>
+                <p class="viewPublished">Published by:{{ $comment->user['name'] }}{{--Can call a user to a single comment. It doesn`t work to collection!!!--}}
+                    <br/> Date: {{ $comment->published_at }}</p>
             </div>
         </article>
         @if( Auth::user()->id == $comment->user_id)
