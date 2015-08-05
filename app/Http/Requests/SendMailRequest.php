@@ -22,8 +22,8 @@ class SendMailRequest extends Request {
 	public function rules()
 	{
 		return [
-			'name' => 'required|min:2|max:30',
-			'email' => 'required|email',
+			/*'name' => 'required|min:2|max:30',
+			'email' => 'required|email',*/
 			'subject' => 'required|max:60',
 			'message' => 'required|min:2|max:1500',
 		];

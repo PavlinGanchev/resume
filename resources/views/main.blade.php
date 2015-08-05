@@ -95,8 +95,7 @@
         <div id="main">
 
             <div class="container">
-                TODO: emial->from;
-                TODO: css mess!!!
+                {{--TODO: css mess!!!--}}
             </div>
            @include('errors.errorLogic')
            @include('partials.flashMsg')

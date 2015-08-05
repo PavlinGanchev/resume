@@ -11,6 +11,9 @@ use Illuminate\Support\Facades\Auth;
 
 class MailController extends Controller {
 
+    /**
+     * @var string
+     */
     protected $redirectTo= '/';
 
     /**
@@ -21,20 +24,26 @@ class MailController extends Controller {
      * @return Response
      */
     public function send(SendMailRequest $request){
-        $data=$request->all();
+        $data=$request->only('subject');
+        //TODO message isn`t send properly
+        $data['message']= explode("\n", $request->get('message'));
+        $data['name']=Auth::user()->name;
+        $data['email']= Auth::user()->email;
 
-        Mail::send('emails.data',['msg' => $data['message'] ] ,function($message) use ($data) {
+        Mail::send('emails.data',$data ,function($message) use ($data) {
 
             $message->from(Auth::user()->email,  Auth::user()->name);
             $message->subject( $data['subject']);
             $message->to('pino84@abv.bg');
+            $message->replyTo($data['email']);
 
             }
         );
 
-        session()->flash('flash_message', 'Thank You for sending a feedback');
+            session()->flash('flash_message', 'Thank You for sending a feedback');
 
-            return redirect('/');
+            return back();
+
     }
 
 }

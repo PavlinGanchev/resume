@@ -7,6 +7,10 @@ use App\User;
 use Illuminate\Http\Request;
 use App\Comment;
 
+/**
+ * Class MainController
+ * @package App\Http\Controllers
+ */
 class MainController extends Controller {
 
 	/**
@@ -62,6 +66,10 @@ class MainController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
+
+	/**
+	 * @param $id
+     */
 	public function show($id)
 	{
 		//
