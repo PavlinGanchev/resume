@@ -25,8 +25,7 @@ class MailController extends Controller {
      */
     public function send(SendMailRequest $request){
         $data=$request->only('subject');
-        //TODO message isn`t send properly
-        $data['message']= explode("\n", $request->get('message'));
+        $data['messages']= explode("\n", $request->get('message'));
         $data['name']=Auth::user()->name;
         $data['email']= Auth::user()->email;
 

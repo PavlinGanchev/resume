@@ -10,8 +10,8 @@
 </ul>
 <hr>
     <p>
-        @foreach($message as $m)
-            {{ $m }}<br/>
+        @foreach($messages as $message)
+            {{ $message }}<br/>
         @endforeach
 
     </p>

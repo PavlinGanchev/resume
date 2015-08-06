@@ -81,6 +81,7 @@
         @endif
 
     </nav>
+    <div class="scrollUpContainer"><a href="#" class="scrollUp"></a></div>
 
 </section>
 
