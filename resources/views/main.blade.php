@@ -10,9 +10,10 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+    <link rel="stylesheet" href="{{ elixir('final/final.css')}}"/>
     <!--[if lte IE 8]><script src="js/ie/html5shiv.js"></script><![endif]-->
-    <link rel="stylesheet" href="/css/app.css"/>
-    <link rel="stylesheet" href="/css/main.css" />
+  {{--  <link rel="stylesheet" href="/css/app.css"/>
+    <link rel="stylesheet" href="/css/main.css" />--}}
     {{--This css is only about login and register TODO: Remove when possible!!! Fix it!!!--}}
 
     <!--[if lte IE 8]><link rel="stylesheet" href="css/ie8.css" /><![endif]-->
@@ -21,6 +22,7 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery.scrollzer.min.js"></script>
     <script src="js/jquery.scrolly.min.js"></script>
+    <script src="js/jquery.scroller.min.js"></script>
     <script src="js/skel.min.js"></script>
     <script src="js/util.js"></script>
     <!--[if lte IE 8]><script src="js/ie/respond.min.js"></script><![endif]-->
@@ -34,11 +36,11 @@
 <section id="header">
     <header>
 
-        <a href="{{ url('/') }}" class="authBtn homeBtn">Home</a>
+        <a href="{{ url('/') }}" class="authBtn homeBtn" title="Home">Home</a>
         @if(Auth::guest())
             <div class="authParrent">
-            <a href="{{ url('login') }}" class="authBtn">Login</a>
-            <a href="{{ url('register') }}" class="authBtn">Register</a>
+            <a href="{{ url('login') }}" class="authBtn" title="Login">Login</a>
+            <a href="{{ url('register') }}" class="authBtn" title="Register">Register</a>
             </div>
         <span class="image avatar"><img src="images/portrait.jpg" alt="portrait of myself" /></span>
         <h1 id="logo">Pavlin Ganchev</h1>
@@ -54,8 +56,8 @@
             </section>
             @else
             <div class="authParrent">
-                <a href="{{ url('logout') }}" class="authBtn">Logout</a>
-                <a href="{{ url('comment/create') }}" class="authBtn" >Leave a comment</a>
+                <a href="{{ url('logout') }}" class="authBtn" title="Logout">Logout</a>
+                <a href="{{ url('comment/create') }}" class="authBtn" title="Leave comment">Leave a comment</a>
             </div>
             <span class="image avatar"><img src="/images/silhouette man1.jpg" alt="avatar picture" /></span>
             <h1 id="logo">Wellcome, {{ Auth::user()->name }} </h1>
@@ -81,7 +83,7 @@
         @endif
 
     </nav>
-    <div class="scrollUpContainer"><a href="#" class="scrollUp"></a></div>
+    <div class="scrollUpContainer"><a href="#" class="scrollUp" title="Scroll to top"></a></div>
 
 </section>
 
@@ -89,7 +91,7 @@
 
     <div id="wrapper">
         <div>
-            <a href="{{ url('/') }}" class="headbanner"></a>
+            <a href="{{ url('/') }}" class="headbanner" title="Home"></a>
         </div>
 
         <!-- Main -->
