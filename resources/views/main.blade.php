@@ -12,22 +12,26 @@
 
     <link rel="stylesheet" href="{{ elixir('final/final.css')}}"/>
     <!--[if lte IE 8]><script src="js/ie/html5shiv.js"></script><![endif]-->
-  {{--  <link rel="stylesheet" href="/css/app.css"/>
-    <link rel="stylesheet" href="/css/main.css" />--}}
+
     {{--This css is only about login and register TODO: Remove when possible!!! Fix it!!!--}}
 
     <!--[if lte IE 8]><link rel="stylesheet" href="css/ie8.css" /><![endif]-->
 
     <!-- Scripts -->
+    {{--<script src="{{ elixir('final/final.js') }}"></script>--}}
+
+
     <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.scroller.min.js"></script>
     <script src="js/jquery.scrollzer.min.js"></script>
     <script src="js/jquery.scrolly.min.js"></script>
-    <script src="js/jquery.scroller.min.js"></script>
     <script src="js/skel.min.js"></script>
     <script src="js/util.js"></script>
-    <!--[if lte IE 8]><script src="js/ie/respond.min.js"></script><![endif]-->
-    <script src="js/main.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+
+
+  {{--<!--[if lte IE 8]><script src="js/ie/respond.min.js"></script><![endif]-->--}}
 
 </head>
 <body>
@@ -48,10 +52,10 @@
             <section>
                 <ul class="icons">
                     {{--Twitter <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>--}}
-                    {{--Facebook--}} <li><a href="facebook.com" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+                    {{--Facebook--}}{{-- <li><a href="facebook.com" class="icon fa-facebook" title="Facebook"><span class="label">Facebook</span></a></li>--}}
                      {{--Instagrem <li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>--}}
-                   {{--Github--}} <li><a href="https://github.com/PavlinGanchev/resume" class="icon fa-github"><span class="label">Github</span></a></li>
-                    {{--E-mail--}}<li><a href="#" class="icon fa-envelope"><span class="label">Email</span></a></li>
+                   {{--Github--}} <li><a href="https://github.com/PavlinGanchev/resume" class="icon fa-github authBtn" title="GitHub source code"><span> The site on GitHub</span><span class="label">Github</span></a></li>
+                   {{-- E-mail<li><a href="#" class="icon fa-envelope" title="Feedback"><span class="label">Email</span></a></li>--}}
                 </ul>
             </section>
             @else

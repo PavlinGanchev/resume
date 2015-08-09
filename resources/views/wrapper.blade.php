@@ -7,10 +7,11 @@
         <div class="container">
             <header class="major">
                 <h2>Pavlin Ganchev</h2>
-                <p>Just an incredibly simple responsive site<br />
-                    template freebie by <a href="http://html5up.net">HTML5 UP</a>.</p>
+                <p>Varna, Bulgaria<br/>
+                pavlin_ganchev_@abv.bg</p>
             </header>
-            <p>Faucibus sed lobortis aliquam lorem blandit. Lorem eu nunc metus col. Commodo id in arcu ante lorem ipsum sed accumsan erat praesent faucibus commodo ac mi lacus. Adipiscing mi ac commodo. Vis aliquet tortor ultricies non ante erat nunc integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer non. Adipiscing cubilia elementum.</p>
+            <p>Career objective:</p>
+            <p>To work as a junior programmer in a company where  I can utilize my skills and by persistent efforts to do my job in the best possible way every day to gain further experience.</p>
         </div>
     </section>
 
@@ -97,7 +98,7 @@
             <!-- Four -->
     <section id="four">
         <div class="container">
-            <h3>If you want to leave a feedback or a review please log in! </h3>
+            <h3>If you want to leave a feedback or comment, please log in! </h3>
 
             <div class="col-md-6 col-md-offset-4">
                 <a href="{{ url('login') }}" class="button special">Login</a>

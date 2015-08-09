@@ -1,5 +1,7 @@
 @import url("../../css/font-awesome.min.css");
 @import url("http://fonts.googleapis.com/css?family=Lato:400,400italic,700,700italic|Source+Code+Pro:400");
+
+
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 html {
   font-family: sans-serif;
@@ -8863,15 +8865,15 @@ label,
 /* Head Banner*/
 
 .headbanner{
-	background-image: url("../../images/banner.jpg");
-	background-position: top right;
+	background-image: url("../../images/codingBannerchild.jpg");
+	background-position: top left;
 	background-repeat: no-repeat;
 	background-size: cover;
 	content: '';
 	display: block;
-	height: 15em;
+	height: 16em;
 	width: 100%;
-	border: 1px solid black;
+	/*border: 3px solid black;*/
 }
 /* One */
 
