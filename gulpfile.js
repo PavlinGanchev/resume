@@ -29,7 +29,7 @@ elixir(function(mix) {
      'jquery.scrolly.min.js',
      'jquery.scrollzer.min.js',
      'skel.min.js',
-    'util.js'
+     'util.js'
  ],'public/final/final.js','public/js');
 
 mix.version(['public/final/final.css','public/final/final.js']);

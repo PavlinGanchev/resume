@@ -26,7 +26,7 @@ class MailController extends Controller {
     public function send(SendMailRequest $request){
         $data=$request->only('subject');
         $data['messages']= explode("\n", $request->get('message'));
-        $data['name']=Auth::user()->name;
+        $data['name']= Auth::user()->name;
         $data['email']= Auth::user()->email;
 
         Mail::send('emails.data',$data ,function($message) use ($data) {
